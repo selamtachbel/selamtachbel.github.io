@@ -1,65 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Selam Tachbel | Software & AI Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selam Tachbel | Portfolio</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#020617;color:#fff;line-height:1.6}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8%;background:#020617;position:sticky;top:0;z-index:100}
+.logo{font-size:22px;font-weight:700}.logo span{color:#3b82f6}
+nav a{color:#fff;text-decoration:none;margin-left:25px}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:90px 8%}
+.hero h1{font-size:64px;line-height:1.1}.hero h1 span{color:#3b82f6}
+.hero h3{font-size:24px;margin:15px 0;color:#e5e7eb}
+.hero p{color:#cbd5e1;max-width:560px}
+.btn{display:inline-block;margin-top:25px;padding:13px 24px;background:#2563eb;color:white;text-decoration:none;border-radius:8px;font-weight:bold}
+.btn.secondary{background:transparent;border:1px solid #334155;margin-left:10px}
+.code-box{background:#0f172a;border:1px solid #1e3a8a;border-radius:18px;padding:35px;box-shadow:0 0 40px rgba(37,99,235,.25);color:#60a5fa}
+section{padding:60px 8%}
+.section-title{text-align:center;font-size:34px;margin-bottom:35px}
+.about,.resume{background:#0f172a;border:1px solid #1e293b;border-radius:18px;padding:35px;margin-bottom:30px}
+.about-grid{display:grid;grid-template-columns:180px 1fr;gap:30px;align-items:center}
+.about img{width:170px;height:170px;border-radius:50%;object-fit:cover;border:4px solid #3b82f6}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.card{background:#0f172a;border:1px solid #1e293b;border-radius:18px;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-8px);box-shadow:0 10px 30px rgba(37,99,235,.25)}
+.card-img{height:170px;background:linear-gradient(135deg,#1e3a8a,#0f172a);display:flex;align-items:center;justify-content:center;font-size:45px}
+.card-body{padding:25px}
+.card h3{font-size:22px;margin-bottom:12px}
+.card p{color:#cbd5e1}
+footer{text-align:center;padding:30px;color:#94a3b8}
+@media(max-width:800px){.hero,.about-grid{grid-template-columns:1fr;text-align:center}.hero h1{font-size:46px}nav{flex-direction:column;gap:10px}}
+</style>
 </head>
+
 <body>
-  <h1>Selam Tachbel</h1>
-  <h2>IT Specialist | MSSE Student | Software & AI Learner</h2>
 
-  <p>
-    I am an experienced IT professional with a background in technical support,
-    customer service, IT operations, and digital systems. I am currently pursuing
-    a Master of Software Engineering and building projects in AI, machine learning,
-    and web development.
-  </p>
+<nav>
+  <div class="logo">Selam <span>Tachbel</span></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#resume">Resume</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-  <h2>Featured Projects</h2>
+<section class="hero">
+  <div>
+    <h1>SELAM<br><span>TACHBEL</span></h1>
+    <h3>IT Specialist | MSSE Student | AI & Software Learner</h3>
+    <p>
+      I build practical software and AI projects while growing my skills in software engineering,
+      machine learning, data analysis, and digital technology.
+    </p>
+    <a class="btn" href="#projects">View Projects</a>
+    <a class="btn secondary" href="#resume">View Resume</a>
+  </div>
 
-  <h3>RAG-Based AI Assistant</h3>
-  <p>
-    An AI project that retrieves information from documents and generates grounded
-    answers with citations.
-  </p>
-  <a href="https://github.com/selamtachbel/rag-policy-chatbot" target="_blank">View Project</a>
+  <div class="code-box">
+<pre>
+&lt;portfolio&gt;
+  &lt;name&gt;Selam Tachbel&lt;/name&gt;
+  &lt;skills&gt;AI, Python, Flask, Web&lt;/skills&gt;
+  &lt;projects&gt;
+    RAG Assistant
+    Malware Detection
+    Cafe Web App
+  &lt;/projects&gt;
+&lt;/portfolio&gt;
+</pre>
+  </div>
+</section>
 
-  <h3>Machine Learning Malware Detection</h3>
-  <p>
-    A machine learning project focused on detecting malware patterns using Python and Flask.
-  </p>
-  <a href="https://github.com/selamtachbel/ml-malware-project" target="_blank">View Project</a>
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="about about-grid">
+    <img src="assets/profile.jpg" alt="Selam Tachbel">
+    <p>
+      I am an experienced IT professional with 10+ years of background in technical support,
+      customer service, IT operations, and digital systems. I am currently pursuing a
+      Master of Software Engineering and building projects in AI, machine learning,
+      and web development.
+    </p>
+  </div>
+</section>
 
-  <h3>Cafe Fausse Web Application</h3>
-  <p>
-    A full-stack school project with frontend and backend functionality.
-  </p>
-  <a href="https://github.com/selamtachbel/cafe-fausse1" target="_blank">View Project</a>
-
-  <h3>Portfolio Website</h3>
-  <p>
-    A professional portfolio website created to showcase my projects, skills, and career background.
-  </p>
-  <a href="https://github.com/selamtachbel/selamtachbel.github.io" target="_blank">View Project</a>
-
-  <h2>Skills</h2>
-  <p>
-    HTML, CSS, JavaScript, Python, Flask, Git, GitHub, SQL, Excel,
-    Machine Learning, RAG Applications, IT Support, CRM Systems, Technical Troubleshooting.
-  </p>
-
-  <h2>Education</h2>
-  <p>
-    Master of Software Engineering, Quantic School of Business and Technology — In Progress
-  </p>
-  <p>
-    Bachelor of Science in Information Technology, Bahir Dar University
-  </p>
-
-  <h2>Contact</h2>
-  <p>Email: selamtachbel450@gmail.com</p>
-  <p>GitHub: <a href="https://github.com/selamtachbel" target="_blank">github.com/selamtachbel</a></p>
-</body>
-</html>
+<section id="resume">
+  <h2 class="section-title">Resume</h2>
+  <div class="resume">
+    <h3>Skills</h3>
+    <p>HTML, CSS, JavaScript, Python, Flask, Git, GitHub, SQL, Excel, Machine Learning, RAG Applications, IT Support.</p>
+    <br>
+    <h3>Experience</h3>
+    <p>IT Specialist — DYM Trading | IT Service Desk Analyst — Ethio Telecom</p>
+    <br>
