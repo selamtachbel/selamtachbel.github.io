@@ -6,32 +6,67 @@
 <title>Selam Tachbel | Portfolio</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
 body{background:#020617;color:#fff;line-height:1.6}
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 8%;background:#020617;position:sticky;top:0;z-index:100}
+nav{height:70px;display:flex;justify-content:space-between;align-items:center;padding:0 6%;background:#020617;position:sticky;top:0;z-index:1000;border-bottom:1px solid #0f172a}
 .logo{font-size:22px;font-weight:700}.logo span{color:#3b82f6}
-nav a{color:#fff;text-decoration:none;margin-left:25px}
-.hero{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:90px 8%}
-.hero h1{font-size:64px;line-height:1.1}.hero h1 span{color:#3b82f6}
-.hero h3{font-size:24px;margin:15px 0;color:#e5e7eb}
-.hero p{color:#cbd5e1;max-width:560px}
-.btn{display:inline-block;margin-top:25px;padding:13px 24px;background:#2563eb;color:white;text-decoration:none;border-radius:8px;font-weight:bold}
+nav a{color:#fff;text-decoration:none;margin-left:28px;font-size:15px}
+nav a:hover{color:#3b82f6}
+
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:85px 6% 55px}
+.badge{display:inline-block;border:1px solid #1e293b;border-radius:12px;padding:10px 18px;margin-bottom:25px;background:#07111f}
+.hero h1{font-size:70px;line-height:1.05;font-weight:800}
+.hero h1 span{color:#3b82f6}
+.hero h3{font-size:23px;margin:18px 0;color:#e5e7eb}
+.hero p{color:#cbd5e1;max-width:560px;font-size:16px}
+.btn{display:inline-block;margin-top:25px;padding:13px 24px;background:#2563eb;color:white;text-decoration:none;border-radius:9px;font-weight:600}
 .btn.secondary{background:transparent;border:1px solid #334155;margin-left:10px}
-.code-box{background:#0f172a;border:1px solid #1e3a8a;border-radius:18px;padding:35px;box-shadow:0 0 40px rgba(37,99,235,.25);color:#60a5fa}
-section{padding:60px 8%}
-.section-title{text-align:center;font-size:34px;margin-bottom:35px}
-.about,.resume{background:#0f172a;border:1px solid #1e293b;border-radius:18px;padding:35px;margin-bottom:30px}
-.about-grid{display:grid;grid-template-columns:180px 1fr;gap:30px;align-items:center}
-.about img{width:170px;height:170px;border-radius:50%;object-fit:cover;border:4px solid #3b82f6}
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.btn:hover{background:#1d4ed8}
+
+.code-box{background:#07111f;border:1px solid #1d4ed8;border-radius:20px;padding:35px;box-shadow:0 0 45px rgba(37,99,235,.28);color:#93c5fd;font-size:15px}
+
+section{padding:35px 6%}
+.panel{background:rgba(15,23,42,.85);border:1px solid #1e293b;border-radius:20px;padding:35px;margin-bottom:25px}
+.about-grid{display:grid;grid-template-columns:180px 1fr 1fr 1fr 1fr;gap:25px;align-items:center}
+.profile{width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid #3b82f6}
+.about-text{grid-column:span 2}
+.about-text h2,.box h2{font-size:25px;margin-bottom:12px}
+.about-text h2:before,.box h2:before{content:'• ';color:#2563eb}
+.about-text p,.box p{color:#cbd5e1}
+.stat{background:#07111f;border:1px solid #1e293b;border-radius:16px;padding:25px;text-align:center}
+.stat h3{font-size:34px;color:#fff}
+.stat p{color:#cbd5e1;font-size:14px}
+
+.resume-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:30px}
+.box{background:rgba(15,23,42,.85);border:1px solid #1e293b;border-radius:20px;padding:30px}
+.skill{margin:14px 0}
+.skill span{display:flex;justify-content:space-between;margin-bottom:6px}
+.bar{height:5px;background:#1e293b;border-radius:20px;overflow:hidden}
+.bar div{height:100%;background:#2563eb}
+.exp-item{border-left:2px solid #1e3a8a;padding-left:18px;margin:22px 0}
+.exp-item h3{font-size:17px}
+.exp-item small{color:#93c5fd}
+.section-title{text-align:center;font-size:32px;margin:35px 0}
+
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .card{background:#0f172a;border:1px solid #1e293b;border-radius:18px;overflow:hidden;transition:.3s}
-.card:hover{transform:translateY(-8px);box-shadow:0 10px 30px rgba(37,99,235,.25)}
-.card-img{height:170px;background:linear-gradient(135deg,#1e3a8a,#0f172a);display:flex;align-items:center;justify-content:center;font-size:45px}
+.card:hover{transform:translateY(-8px);box-shadow:0 12px 35px rgba(37,99,235,.25)}
+.thumb{height:180px;display:flex;align-items:center;justify-content:center;font-size:55px;background:linear-gradient(135deg,#1e3a8a,#020617)}
 .card-body{padding:25px}
-.card h3{font-size:22px;margin-bottom:12px}
-.card p{color:#cbd5e1}
-footer{text-align:center;padding:30px;color:#94a3b8}
-@media(max-width:800px){.hero,.about-grid{grid-template-columns:1fr;text-align:center}.hero h1{font-size:46px}nav{flex-direction:column;gap:10px}}
+.card-body h3{font-size:22px;margin-bottom:12px}
+.card-body p{color:#cbd5e1;min-height:90px}
+
+.contact{text-align:center}
+footer{text-align:center;padding:30px;color:#94a3b8;border-top:1px solid #1e293b;margin-top:30px}
+
+@media(max-width:950px){
+.hero,.resume-grid,.projects{grid-template-columns:1fr}
+.about-grid{grid-template-columns:1fr;text-align:center}
+.about-text{grid-column:span 1}
+.hero h1{font-size:48px}
+nav{height:auto;padding:18px 6%;display:block;text-align:center}
+nav a{display:inline-block;margin:10px}
+}
 </style>
 </head>
 
@@ -41,58 +76,37 @@ footer{text-align:center;padding:30px;color:#94a3b8}
   <div class="logo">Selam <span>Tachbel</span></div>
   <div>
     <a href="#about">About</a>
-    <a href="#resume">Resume</a>
+    <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <section class="hero">
   <div>
-    <h1>SELAM<br><span>TACHBEL</span></h1>
-    <h3>IT Specialist | MSSE Student | AI & Software Learner</h3>
-    <p>
-      I build practical software and AI projects while growing my skills in software engineering,
-      machine learning, data analysis, and digital technology.
-    </p>
-    <a class="btn" href="#projects">View Projects</a>
-    <a class="btn secondary" href="#resume">View Resume</a>
-  </div>
-
-  <div class="code-box">
-<pre>
-&lt;portfolio&gt;
-  &lt;name&gt;Selam Tachbel&lt;/name&gt;
-  &lt;skills&gt;AI, Python, Flask, Web&lt;/skills&gt;
-  &lt;projects&gt;
-    RAG Assistant
-    Malware Detection
-    Cafe Web App
-  &lt;/projects&gt;
-&lt;/portfolio&gt;
-</pre>
+    <div class="badge">👋 Hello, I’m</div>
+    <div class="card-body">
+        <h3>Cafe Fausse Web Application</h3>
+        <p>Full-stack school project with frontend and backend functionality.</p>
+        <a class="btn" href="https://github.com/selamtachbel/cafe-fausse1" target="_blank">View Project</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="about">
-  <h2 class="section-title">About Me</h2>
-  <div class="about about-grid">
-    <img src="assets/profile.jpg" alt="Selam Tachbel">
-    <p>
-      I am an experienced IT professional with 10+ years of background in technical support,
-      customer service, IT operations, and digital systems. I am currently pursuing a
-      Master of Software Engineering and building projects in AI, machine learning,
-      and web development.
-    </p>
+<section id="contact">
+  <div class="box contact">
+    <h2>Contact</h2>
+    <p>Email: selamtachbel450@gmail.com</p>
+    <p>GitHub: github.com/selamtachbel</p>
+    <p>Location: Addis Ababa, Ethiopia</p>
   </div>
 </section>
 
-<section id="resume">
-  <h2 class="section-title">Resume</h2>
-  <div class="resume">
-    <h3>Skills</h3>
-    <p>HTML, CSS, JavaScript, Python, Flask, Git, GitHub, SQL, Excel, Machine Learning, RAG Applications, IT Support.</p>
-    <br>
-    <h3>Experience</h3>
-    <p>IT Specialist — DYM Trading | IT Service Desk Analyst — Ethio Telecom</p>
-    <br>
+<footer>© 2026 Selam Tachbel. All Rights Reserved.</footer>
+
+</body>
+</html>
+  <div>
+    <div class="badge">👋 Hello, I’m</div>
